@@ -5,7 +5,7 @@ import { MainView } from "./styles";
 export default function AppIndex(){
     return(
         <MainView>
-            <Text> Estamos Aqui Index</Text>
+            <Text>Developer with TypeScript</Text>
         </MainView>
     )
 }
