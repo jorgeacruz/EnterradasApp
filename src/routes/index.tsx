@@ -3,10 +3,12 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import AppIndex from "../pages/Home/Index";
+import IndexHome from "../pages/Home/Index";
+import IndexApp from "../pages/App";
 import LoginPage from "../pages/Home/login";
 import NewAccount from "../pages/Home/NewAccount";
 import LostPassword from "../pages/Home/LostPassword";
+
 
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +18,7 @@ export default function Routes() {
     
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={AppIndex}
+          <Stack.Screen name="IndexHome" component={IndexHome}
           options={{
             headerShown:false
           }}

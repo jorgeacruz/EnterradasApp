@@ -10,7 +10,7 @@ import NewAccount from "./NewAccount";
 //video Dimensios
 const { width, height } = Dimensions.get('window');
 
-export default function AppIndex(){
+export default function IndexHome(){
 
     const navigation = useNavigation();
     
