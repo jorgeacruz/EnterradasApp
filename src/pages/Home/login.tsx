@@ -1,18 +1,47 @@
-import React from "react";
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from "react";
+import { StyleSheet } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
+import { MainView, Inputs, Logo, Button, Text, Link, Title } from './styles';
+
+//Go to
+import LostPassword from "./LostPassword";
 
 export default function LoginPage(){
+    const navigation = useNavigation();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+
+    function gotoNextPage(){ navigation.navigate(LostPassword)}
+    function createNewAccount(){
+        if( email === '' || email === ''){
+            alert('Nome ou Email não pode estar vazio')
+        }
+    }
     return(
-        <View style={styles.container}>
-            <Text> Estamos Aqui Index</Text>
-        </View>
+        <MainView style={{backgroundColor:'#006837', paddingBottom:50}}>
+            <Logo source={require('../../images/logo.png')} style={{width:250, height:250}}/>
+            
+            <Title> Fazer Login na minha conta</Title>
+            <Inputs 
+            placeholder='Digite seu Email' 
+            placeholderTextColor='#fff'
+            value={email}
+            onChangeText={(texto) => setEmail(texto)} />
+            <Inputs 
+            placeholder='Digite sua senha' 
+            placeholderTextColor='#fff'
+            secureTextEntry={true}
+            value={password}
+            onChangeText={(texto) => setPassword(texto)} />
+
+            <Button style={{marginTop:10}} onPress={createNewAccount}>
+                <Text style={{color:'#000', fontWeight:'bold'}}>Logar Conta</Text>
+            </Button>
+            <Link style={{margin:20}} onPress={gotoNextPage}>
+                <Text> Esqueci minha senha</Text>
+            </Link>
+        </MainView>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        justifyContent:"center",
-        alignItems:"center"
-    }
-})
