@@ -1,19 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet, } from 'react-native';
+import { Dimensions } from 'react-native';
 import { MainView } from "./styles";
+import { Video, ResizeMode } from "expo-av";
+
+//video Dimensios
+const { width, height } = Dimensions.get('window');
 
 export default function AppIndex(){
     return(
         <MainView>
-            <Text>Developer with TypeScript</Text>
+            <Video
+            source={require('../../video/dunks.mp4')}
+            resizeMode={ResizeMode.COVER}
+            style={{width:width, height:height, opacity:0.6}}
+            isLooping={true}
+            shouldPlay={true}
+            />
         </MainView>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        justifyContent:"center",
-        alignItems:"center"
-    }
-})
