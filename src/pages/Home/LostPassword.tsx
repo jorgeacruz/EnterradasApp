@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { MainView, Inputs, Logo, Button, Text, Link, Title } from './styles';
 
 //Go to
-import LoginPage from "./login";
+import LoginPage from "./Login";
 
 export default function LostPassword(){
     const navigation = useNavigation();

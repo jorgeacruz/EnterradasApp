@@ -1,14 +1,7 @@
-import React from "react";
-import { MainView, Text } from "./styles";
-import { useNavigation } from "@react-navigation/native";
+import NavDrawer from '../../routes/drawer';
 
-export default function IndexApp(){
-
-    const navigation = useNavigation();
-
-    return(
-        <MainView>
-            <Text>Dentro do App</Text>
-        </MainView>
-    )
+export default function IndexApp() {
+  return (
+    <NavDrawer/>
+  );
 }

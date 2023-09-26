@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import { MainView, Inputs, Logo, Button, Text, Link, Title } from './styles';
 
-import LoginPage from "./login";
+import LoginPage from "./Login";
 
 export default function NewAccount(){
     const navigation = useNavigation();
