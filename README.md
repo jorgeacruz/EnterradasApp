@@ -7,6 +7,7 @@
 - Navigation (Stack - Drawer)
 - Expo-av (Video)
 - Firebase (login)
+- Vector-Icons
 
 ### Hooks
 - useState

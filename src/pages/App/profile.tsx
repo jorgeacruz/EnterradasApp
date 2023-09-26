@@ -8,7 +8,7 @@ export default function Profile(){
 
     return(
         <MainView>
-            <Text>Dentro do App</Text>
+            <Text>Profile</Text>
         </MainView>
     )
 }
