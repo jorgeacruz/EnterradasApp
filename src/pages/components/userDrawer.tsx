@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from 'react-native'
 import { DrawerContentScrollView, DrawerItemList, DrawerItem, } from "@react-navigation/drawer";
-import Icon  from 'react-native-vector-icons/Feather'
+import Icon  from 'react-native-vector-icons/FontAwesome5'
 
 //define icon buttom exit
-const profileIcon =({color, size}) => <Icon name={'log-out'} size={size} color={"#fff"}/>
+const profileIcon =({}) => <Icon name={'sign-out-alt'} size={18} color={"#fff"}/>
 
 export default function userDrawer(props){
     return(
@@ -16,7 +16,7 @@ export default function userDrawer(props){
                 alignItems:"center",
             }}
             >
-                <Image source={require('../../images/user.png')} style={{
+                <Image source={require('../../images/logo.png')} style={{
                     width:120,
                     height:120
                 }}/>
@@ -43,5 +43,5 @@ export default function userDrawer(props){
 
 //buttom style
 const styles = StyleSheet.create({
-    bt:{ backgroundColor:'#8a8a8a' }
+    bt:{ backgroundColor:'#000' }
 })

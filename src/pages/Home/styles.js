@@ -52,5 +52,6 @@ width: 80%;
 height: 40px;
 text-align: center;
 margin-top: 10px;
+color: #fff;
 `;
 export default styled;

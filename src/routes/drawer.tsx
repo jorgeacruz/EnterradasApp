@@ -1,18 +1,27 @@
 import 'react-native-gesture-handler';
+import { StatusBar } from 'react-native';
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import Icon  from 'react-native-vector-icons/FontAwesome5'
 
 
 //Drawer Pages
 import Home from "../pages/App/Home";
 import Profile from "../pages/App/profile";
 import userDrawer from '../pages/components/userDrawer';
-import Icon  from 'react-native-vector-icons/Feather'
-import exitButtom from '../pages/components/exitButtom';
+
+import SearchPage from '../pages/App/Search';
+import Players from '../pages/App/Players';
+import Times from '../pages/App/Times';
+
 const Drawer = createDrawerNavigator();
 
 //define Drawer Icons
-const HomeIcon =({color, size}) => <Icon name={'home'} size={size} color={color}/>
-const profileIcon =({color, size}) => <Icon name={'user'} size={size} color={color}/>
+
+const HomeIcon =({color, size}) => <Icon name={'home'} size={18} color={color}/>
+const profileIcon =({color, size}) => <Icon name={'user'} size={18} color={color}/>
+const searchIcon =({color, size}) => <Icon name={'search'} size={18} color={color}/>
+const playerIcon =({color, size}) => <Icon name={'basketball-ball'} size={18} color={color}/>
+const timesIcon =({color, size}) => <Icon name={'flag'} size={18} color={color}/>
 
 export default function NavDrawer(){
     
@@ -23,9 +32,10 @@ export default function NavDrawer(){
             drawerContent={userDrawer}
 
             screenOptions={{
-            drawerActiveTintColor:'#ff0',
-            drawerActiveBackgroundColor:'#000',  
-            drawerInactiveTintColor:'#fff',
+            drawerActiveTintColor:'#000',
+            drawerActiveBackgroundColor:'#ff0',
+            drawerInactiveBackgroundColor:'#6f977385',  
+            drawerInactiveTintColor:'#000',
             drawerStatusBarAnimation:'slide',
             drawerStyle:{
                 backgroundColor:'#006837',
@@ -39,8 +49,7 @@ export default function NavDrawer(){
                     headerTintColor:'#ff0',
                     headerTitle:'Boomm Shakalaka',
                     headerTitleStyle:{
-                        fontWeight:'bold',
-                        color:'#ff0'
+                        fontWeight:'bold'
                     },
                     headerStyle:{
                         backgroundColor:'#006837'
@@ -50,15 +59,43 @@ export default function NavDrawer(){
                 />
                 <Drawer.Screen name="Seu Perfil" component={Profile}
                 options={{
-                    headerTitle:'Seu Perfil',
-                    headerTintColor:'#FFF',
+                  //  headerTitle:'Seu Perfil',
+                    headerTintColor:'#ff0',
                     headerStyle:{
                         backgroundColor:'#006837'
                     },
                     drawerIcon:profileIcon,
                 }}
                 />
-               
+                <Drawer.Screen name='Pesquisar' component={SearchPage}
+                options={{
+                    headerTintColor:'#ff0',
+                    headerStyle:{
+                        backgroundColor:'#006837'
+                    },
+                    drawerIcon:searchIcon,
+                }}
+                />
+                
+                <Drawer.Screen name='Jogadores' component={Players}
+                options={{
+                    headerTintColor:'#ff0',
+                    headerStyle:{
+                        backgroundColor:'#006837'
+                    },
+                    drawerIcon:playerIcon,
+                }}
+                />
+                
+                <Drawer.Screen name='Times' component={Times}
+                options={{
+                    headerTintColor:'#FF0',
+                    headerStyle:{
+                        backgroundColor:'#006837'
+                    },
+                    drawerIcon:timesIcon,
+                }}
+                />
                 
             </Drawer.Navigator>
     )
