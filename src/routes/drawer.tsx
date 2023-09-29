@@ -35,7 +35,7 @@ export default function NavDrawer(){
             drawerActiveTintColor:'#000',
             drawerActiveBackgroundColor:'#ff0',
             drawerInactiveBackgroundColor:'#6f977385',  
-            drawerInactiveTintColor:'#000',
+            drawerInactiveTintColor:'#fff',
             drawerStatusBarAnimation:'slide',
             drawerStyle:{
                 backgroundColor:'#006837',
@@ -67,15 +67,6 @@ export default function NavDrawer(){
                     drawerIcon:profileIcon,
                 }}
                 />
-                <Drawer.Screen name='Pesquisar' component={SearchPage}
-                options={{
-                    headerTintColor:'#ff0',
-                    headerStyle:{
-                        backgroundColor:'#006837'
-                    },
-                    drawerIcon:searchIcon,
-                }}
-                />
                 
                 <Drawer.Screen name='Jogadores' component={Players}
                 options={{
@@ -94,6 +85,16 @@ export default function NavDrawer(){
                         backgroundColor:'#006837'
                     },
                     drawerIcon:timesIcon,
+                }}
+                />
+
+                <Drawer.Screen name='Pesquisar' component={SearchPage}
+                options={{
+                    headerTintColor:'#ff0',
+                    headerStyle:{
+                        backgroundColor:'#006837'
+                    },
+                    drawerIcon:searchIcon,
                 }}
                 />
                 
