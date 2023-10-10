@@ -1,10 +1,21 @@
 import React from "react";
-import { View, Text } from 'react-native'
+import { ScrollView } from 'react-native'
+import { MainView, Title } from "./styles";
+
+import SwiperCards from "../components/swiperCards";
+import ScrollPlayers from "../components/scrollPlayers";
+
+
 
 export default function Home(){
     return(
-        <View>
-            <Text>Home Page</Text>
-        </View>
+        <MainView>
+            <ScrollView showsVerticalScrollIndicator={false}>
+               <Title>Video Dunk's</Title> 
+               <SwiperCards/>
+               <Title>Players</Title> 
+                <ScrollPlayers/>
+            </ScrollView>
+        </MainView>
     )
 }
