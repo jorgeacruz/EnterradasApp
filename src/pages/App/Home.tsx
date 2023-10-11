@@ -11,9 +11,7 @@ export default function Home(){
     return(
         <MainView>
             <ScrollView showsVerticalScrollIndicator={false}>
-               <Title>Video Dunk's</Title> 
-               <SwiperCards/>
-               <Title>Players</Title> 
+                <SwiperCards/> 
                 <ScrollPlayers/>
             </ScrollView>
         </MainView>

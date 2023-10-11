@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import { MainView, Text } from "./styles";
+import { MainView,} from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Times(){
@@ -9,7 +9,7 @@ export default function Times(){
 
     return(
         <MainView>
-            <Text>Times</Text>
+            
         </MainView>
     )
 }

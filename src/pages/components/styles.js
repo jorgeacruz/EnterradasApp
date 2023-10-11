@@ -1,35 +1,33 @@
 import styled from "styled-components";
 
 export const SwipeImage = styled.Image`
-width: 330px;
+width: 465px;
 `;
 
 export const Title = styled.Text`
 position: absolute;
-bottom: 20px;
+bottom: 30px;
 color: #fff;
-left: 20px;
-font-size: 30px;
+left: 30px;
+font-size: 25px;
 font-weight: bold;
 `;
 
 export const Subtitle = styled.Text`
 position: absolute;
 bottom: 60px;
-left: 20px;
+left: 30px;
 color: #fff;
 font-size: 15px;
 font-weight: 500;
 `;
 
 export const SwipeButton = styled.TouchableOpacity`
-border-radius: 10px;
+
 `;
 
 export const SwipeView = styled.View`
 
-justify-content: center;
-align-items: center;
 `;
 
 // ScrollPlayers Styles

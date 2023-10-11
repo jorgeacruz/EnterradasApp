@@ -11,4 +11,10 @@
 
 ### Hooks
 - useState
-- useRef
+- useEffect
+
+### Components
+- View
+- stylesheet
+- Flatlist
+- TouchableOpacity

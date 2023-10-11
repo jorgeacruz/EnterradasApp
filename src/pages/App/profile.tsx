@@ -1,5 +1,5 @@
 import React from "react";
-import { MainView, Text } from "./styles";
+import { MainView, } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Profile(){
@@ -8,7 +8,7 @@ export default function Profile(){
 
     return(
         <MainView>
-            <Text>Profile</Text>
+           
         </MainView>
     )
 }
