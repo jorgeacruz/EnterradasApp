@@ -37,6 +37,7 @@ height: 160px;
 export const Text = styled.Text`
 color: #fff;
 `;
+
  export const Title = styled.Text`
  font-size: 20px;
  margin-top: 10px;

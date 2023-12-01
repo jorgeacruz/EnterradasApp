@@ -30,7 +30,7 @@ export default function NavStack() {
           />
           <Stack.Screen name="NewAccount" component={NewAccount}
           options={{
-            headerShown:true,
+            headerShown:false,
             title:'',
             headerTintColor:'#fff',
             headerStyle:{
