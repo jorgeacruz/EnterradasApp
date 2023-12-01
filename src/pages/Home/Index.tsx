@@ -27,7 +27,8 @@ export default function IndexHome(){
             />
             <FrontView>
                 <Logo source={require('../../images/fly.png')}/>
-                <Button onPress={gotoNextPage}>
+            
+                <Button onPress={gotoNextPage} underlayColor="#006837">
                     <Text style={{color:'#000', fontWeight:'bold'}}>NUNCA DESISTA DE VOAR</Text>
                 </Button>
             </FrontView>

@@ -18,3 +18,4 @@
 - stylesheet
 - Flatlist
 - TouchableOpacity
+- Outros Componentes
