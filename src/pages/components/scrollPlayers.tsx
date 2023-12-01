@@ -9,8 +9,8 @@ export default function ScrollPlayers(){
     
 
     return(
-        <View style={{paddingHorizontal:10}}>
-            <Text style={{color:'#000', fontWeight:"bold", fontSize:25, paddingLeft:12}}>Os Jogadores</Text>
+        <View style={{paddingHorizontal:5, paddingVertical:20}}>
+            <Text style={{color:'#000', fontWeight:"bold", fontSize:25, paddingLeft:12, textAlign:"center"}}>Conheça seu Favorito</Text>
 
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 
@@ -38,8 +38,6 @@ export default function ScrollPlayers(){
                     <PlayerImage source={require('../../images/players/player6.png')} />
                     <Text>Harden</Text>
                 </Button>
-                                     
-                   
                 
             </ScrollView>
         </View>

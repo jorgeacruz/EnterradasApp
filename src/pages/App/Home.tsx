@@ -11,8 +11,8 @@ export default function Home(){
     return(
         <MainView>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <SwiperCards/> 
                 <ScrollPlayers/>
+                <SwiperCards/> 
             </ScrollView>
         </MainView>
     )
