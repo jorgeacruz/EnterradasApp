@@ -8,7 +8,8 @@ align-items: center;
 `;
 
 export const SwipeImage = styled.Image`
-width: 320px;
+width:320px;
+height: 430px;
 border-radius: 15px;
 `;
 
