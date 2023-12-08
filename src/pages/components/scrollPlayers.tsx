@@ -10,7 +10,7 @@ export default function ScrollPlayers(){
 
     return(
         <View style={{paddingHorizontal:5, paddingVertical:20}}>
-            <Text style={{color:'#000', fontWeight:"bold", fontSize:25, paddingLeft:12, textAlign:"center"}}>Conheça seu Favorito</Text>
+            <Text style={{color:'#000', fontWeight:"bold", fontSize:25, paddingLeft:12, textAlign:"center"}}>Top 10 MVP</Text>
 
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 
