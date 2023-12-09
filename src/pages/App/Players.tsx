@@ -1,7 +1,7 @@
 import React from "react";
 import { MainView, View } from "./styles";
 import { data } from "../api/apisPlayers";
-import { FlatList, Text, Image } from "react-native";
+import { FlatList, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Players(){
@@ -10,24 +10,40 @@ export default function Players(){
 
     return(
         <MainView>
-            <FlatList
-            data={data}
-            renderItem={({ item }) => <ListPlayer data={item}/>}
-            scrollEnabled
-            showsVerticalScrollIndicator={false}
-            />
+           <FlatList
+           data={data}
+           renderItem={({ item }) => (
+            <View style={styles.area}>
+                <View>
+                    <Image
+                    source={{uri:item.imageURL}}
+                    style={styles.imageLogo}
+                    />
+                </View>
+                <View>
+                    <Text>{item.name}</Text>
+                    <Text>{item.position}</Text>
+                </View>
+               
+            </View>
+           )}/>
         </MainView>
     )
 }
 
-{/** Players */}
-
-function ListPlayer(props){
-    return(
-        <View>
-            <Text>{props.data.name}</Text>
-            <Text>{props.data.team}</Text>
-            <Text>{props.data.image}</Text>
-        </View>
-    )
-}
+const styles = StyleSheet.create({
+    area:{
+        flex:1,
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between",
+        width:400,
+        borderWidth:1,
+        padding:8
+    },
+    imageLogo:{
+        width:100,
+        height:100,
+        borderRadius:20
+    }
+})
