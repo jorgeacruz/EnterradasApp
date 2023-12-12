@@ -1,4 +1,6 @@
+
 export const data = [
+  
   
   {
     id: 0,
@@ -7,7 +9,7 @@ export const data = [
     position: 'Point-Guard',
     imageURL: 'https://m.media-amazon.com/images/I/51Gvcvml+nL._AC_UF894,1000_QL80_.jpg',
     city:'chigago',
-    map:'https://google.com'
+    url:'https://apple.com',
   },
   {
     id: 1,
@@ -16,15 +18,87 @@ export const data = [
     position: 'Guard',
     imageURL: 'https://m.media-amazon.com/images/I/51Gvcvml+nL._AC_UF894,1000_QL80_.jpg',
     city:'chigago',
-    map:'https://google.com'
+    url:'https://google.com',
   },
   {
     id: 2,
-    name: 'Magic Johnson',
+    name: 'Hakeen Olajuwon',
     team:'Los Angeles Lakes',
-    position: 'Guard',
-    imageURL: 'https://m.media-amazon.com/images/I/51Gvcvml+nL._AC_UF894,1000_QL80_.jpg',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
     city:'chigago',
-    map:'https://google.com'
+    url:'https://google.com',
+  },
+  {
+    id: 3,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id: 4,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id: 5,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id: 6,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id: 7,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id:8,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id:9,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
+  },
+  {
+    id:10,
+    name: 'Hakeen Olajuwon',
+    team:'Los Angeles Lakes',
+    position: 'Point Guard',
+    imageURL: 'https://www.cobrockets.co.uk/wp-content/uploads/2022/07/city-of-birmingham-rockets-hakeem-abdul-olajuwon-3-1024x853.jpeg',
+    city:'chigago',
+    url:'https://google.com',
   },
 ]
