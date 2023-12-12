@@ -1,10 +1,9 @@
 import React from "react";
-import { MainView, View } from "./styles";
+//import { MainView, View } from "./styles";
 import { data } from "../api/apisPlayers";
-import { FlatList, Text, Image, StyleSheet, TouchableOpacity, Linking } from "react-native";
+import { View, FlatList, Text, Image, StyleSheet, TouchableOpacity, Linking } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import Teste from "./teste";
 
 export default function Players(){
 
@@ -12,7 +11,7 @@ export default function Players(){
 
 
     return(
-        <MainView>
+        <View style={styles.container}>
            <FlatList
            data={data}
            scrollEnabled
@@ -39,22 +38,28 @@ export default function Players(){
                
             </View>
            )}/>
-        </MainView>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        paddingHorizontal:5,
+        backgroundColor:'#006837',
+        paddingTop:10
+    },
     area:{
         flex:1,
         flexDirection:"row",
         alignItems:"center",
       //  justifyContent:"space-around",
-        width:400,
+        width:'95%',
         borderTopLeftRadius:50,
         borderBottomLeftRadius:50,
-        borderTopRightRadius:20,
-        borderBottomRightRadius:20,
-        margin:5,
+        borderTopRightRadius:10,
+        borderBottomRightRadius:10,
+        margin:3,
         backgroundColor:'#000'
         
     },
@@ -74,7 +79,7 @@ const styles = StyleSheet.create({
     },
     Title:{
         fontWeight:"bold",
-        fontSize:25,
+        fontSize:20,
         color:'#fff'
     },
     position:{
