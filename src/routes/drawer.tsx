@@ -11,7 +11,7 @@ import userDrawer from '../pages/components/userDrawer';
 
 import SearchPage from '../pages/App/Search';
 import Players from '../pages/App/Players';
-import Times from '../pages/App/Times';
+import Teams from '../pages/App/Teams'
 
 const Drawer = createDrawerNavigator();
 
@@ -78,7 +78,7 @@ export default function NavDrawer(){
                 }}
                 />
                 
-                <Drawer.Screen name='Times' component={Times}
+                <Drawer.Screen name='Teams' component={Teams}
                 options={{
                     headerTintColor:'#FF0',
                     headerStyle:{

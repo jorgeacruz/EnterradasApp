@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import { ScrollView } from "react-native-gesture-handler";
 
 
-export default function Times(){
+export default function Teams(){
     // navigation
     const navigation = useNavigation();
     
