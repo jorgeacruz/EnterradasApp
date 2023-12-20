@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 export default function SearchPage(){
     return(
         <View>
-            <Text>Search Page</Text>
+            <Text>Seaasaarch Page</Text>
         </View>
     )
 }

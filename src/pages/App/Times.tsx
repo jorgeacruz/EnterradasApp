@@ -1,39 +1,36 @@
-import React, { useEffect, useState} from "react";
-import { FlatList, View, Text } from "react-native";
-import { MainView,} from "./styles";
+import React from "react";
+import {  Text,  StyleSheet, Image, TouchableOpacity } from "react-native";
+import { MainView, View} from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import { ScrollView } from "react-native-gesture-handler";
 
-import apiNBA from "../api/api-NBA";
 
 export default function Times(){
     // navigation
     const navigation = useNavigation();
     
-    // Api NBA
-    const [team, setTeam] = useState([]);
-    useEffect(() => {
-
-        async function loadTeam(){
-            const response = await apiNBA.get('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams');
-            console.log(response.data);
-            setTeam(response.data)
-        }
-
-        loadTeam();
-
-    },[])
-
     return(
-        <MainView>
-            <FlatList
-            data={team}
-            
-            renderItem={({item}) => 
-                <View>
-                      <Text>sasas</Text>  
-                </View>
-            }
-            />           
-        </MainView>
+       <MainView>
+        <ScrollView>
+            <View style={{flex:1, width:'95%', justifyContent:'space-around', flexDirection:'row', paddingTop:20}}>
+                <TouchableOpacity>
+                    <Image source={{uri:'https://logos-world.net/wp-content/uploads/2020/05/Los-Angeles-Lakers-Symbol.png'}} style={{width:140, height:120}}/>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Image source={{uri:'https://i.pinimg.com/originals/4b/2e/f8/4b2ef825eb108f47fa12d60ddfabb0f7.jpg'}} style={{width:140, height:120}}/>
+                </TouchableOpacity>
+            </View>
+        </ScrollView>
+       </MainView>
     )
 }
+
+const styles = StyleSheet.create({
+    conatiner:{
+        flex:1,
+        backgroundColor:'#000',
+        justifyContent:"center",
+        alignItems:'center'
+    }
+})
