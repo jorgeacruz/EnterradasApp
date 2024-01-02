@@ -18,7 +18,7 @@ export default function NewAccount(){
     function gotoNextPage(){ navigation.navigate("LoginPage")}
     function createNewAccount(){
         if( name === '' || email === ''){
-            Toast.error('Preencha todos os campos')
+            Toast.error('Preencha todos os campos');
             return;
         } else {
             Toast.success('Conta criada com sucesso')

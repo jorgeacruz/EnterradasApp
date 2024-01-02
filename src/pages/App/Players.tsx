@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         marginRight:10
     },
     cta:{
-        backgroundColor:'#000',
+        backgroundColor:'#fff',
         padding:4,
         justifyContent:"center",
         alignItems:"center"

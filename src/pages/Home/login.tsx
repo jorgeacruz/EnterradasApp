@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { StyleSheet } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import { MainView, Inputs, Logo, Button, Text, Link, Title } from './styles';
 
@@ -23,6 +22,7 @@ export default function LoginPage(){
     }
     return(
         <MainView style={{backgroundColor:'#006837', paddingBottom:50}}>
+        
             <Logo source={require('../../images/logo.png')} style={{width:250, height:250}}/>
             
             <Title> Fazer Login na minha conta</Title>

@@ -14,7 +14,7 @@ export default function Teams(){
         <ScrollView>
             <View style={{flex:1, width:'95%', justifyContent:'space-around', flexDirection:'row', paddingTop:20}}>
                 <TouchableOpacity>
-                    <Image source={{uri:'https://logos-world.net/wp-content/uploads/2020/05/Los-Angeles-Lakers-Symbol.png'}} style={{width:140, height:120}}/>
+                    <Image source={{uri:'https://logos-world.net/wp-content/uploads/2020/05/Los-Angeles-Lakers-Symbol.png'}} style={{width:140, height:120,}}/>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
