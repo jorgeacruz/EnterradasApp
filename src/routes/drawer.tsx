@@ -1,8 +1,10 @@
 import 'react-native-gesture-handler';
-import { StatusBar } from 'react-native';
+import React, { useContext } from 'react';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Icon  from 'react-native-vector-icons/FontAwesome5'
 
+//import Provider
+import { AuthContext } from '../contexts/auth';
 
 //Drawer Pages
 import Home from "../pages/App/Home";
@@ -11,12 +13,11 @@ import userDrawer from '../pages/components/userDrawer';
 
 import SearchPage from '../pages/App/Search';
 import Players from '../pages/App/Players';
-import Times from '../pages/App/Times';
+import Teams from '../pages/App/Teams'
 
 const Drawer = createDrawerNavigator();
 
 //define Drawer Icons
-
 const HomeIcon =({color, size}) => <Icon name={'home'} size={18} color={color}/>
 const profileIcon =({color, size}) => <Icon name={'user'} size={18} color={color}/>
 const searchIcon =({color, size}) => <Icon name={'search'} size={18} color={color}/>
@@ -41,9 +42,10 @@ export default function NavDrawer(){
                 backgroundColor:'#006837',
                 width:'60%',
                 paddingTop:20,
-            }  
+                }  
             }}
             >
+                
                 <Drawer.Screen name="Home" component={Home}
                 options={{
                     headerTintColor:'#ff0',
@@ -78,7 +80,7 @@ export default function NavDrawer(){
                 }}
                 />
                 
-                <Drawer.Screen name='Times' component={Times}
+                <Drawer.Screen name='Teams' component={Teams}
                 options={{
                     headerTintColor:'#FF0',
                     headerStyle:{
@@ -97,7 +99,7 @@ export default function NavDrawer(){
                     drawerIcon:searchIcon,
                 }}
                 />
-                
+                           
             </Drawer.Navigator>
     )
 }

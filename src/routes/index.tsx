@@ -17,6 +17,7 @@ export default function NavStack() {
     return (
     
       <NavigationContainer>
+        
         <Stack.Navigator>
           <Stack.Screen name="IndexHome" component={IndexHome}
           options={{
@@ -59,6 +60,7 @@ export default function NavStack() {
           }}
           />
         </Stack.Navigator>
+        
       </NavigationContainer>
       
     );
