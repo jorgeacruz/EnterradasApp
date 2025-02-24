@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //Stack Pages
 import IndexHome from "../pages/Home/Index";
 import IndexApp from "../pages/App";
-import LoginPage from "../pages/Home/Login";
+import LoginPage from '../pages/Home/login';
 import NewAccount from "../pages/Home/NewAccount";
 import LostPassword from "../pages/Home/LostPassword";
 
