@@ -22,6 +22,7 @@ export default function NewAccount(){
             return;
         } else {
             Toast.success('Conta criada com sucesso')
+            navigation.navigate("LoginPage")
         }
     }
     return(
@@ -37,7 +38,8 @@ export default function NewAccount(){
             placeholder='Digite seu Email' 
             placeholderTextColor='#fff'
             value={email}
-            onChangeText={(texto) => setEmail(texto)} />
+            onChangeText={(texto) => setEmail(texto)}
+            autoCapitalize="none" />
             <Inputs 
             placeholder='Digite sua senha' 
             placeholderTextColor='#fff'

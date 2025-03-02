@@ -9,8 +9,6 @@ import LoginPage from '../pages/Home/login';
 import NewAccount from "../pages/Home/NewAccount";
 import LostPassword from "../pages/Home/LostPassword";
 
-
-
 const Stack = createNativeStackNavigator();
 
 export default function NavStack() {
@@ -31,7 +29,7 @@ export default function NavStack() {
           />
           <Stack.Screen name="NewAccount" component={NewAccount}
           options={{
-            headerShown:false,
+            headerShown:true,
             title:'',
             headerTintColor:'#fff',
             headerStyle:{

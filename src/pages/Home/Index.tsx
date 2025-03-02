@@ -1,34 +1,48 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Dimensions } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import { FrontView, MainView, Button, Text, Logo } from "./styles";
-import { Video, ResizeMode } from "expo-av";
+import { Video, ResizeMode, AVPlaybackStatus } from "expo-av";
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-//Go to 
-import NewAccount from "./NewAccount";
+// Remove unused import if not needed
+// import NewAccount from "./NewAccount";
 
-//video Dimensios
+//video Dimensions
 const { width, height } = Dimensions.get('window');
 
-export default function IndexHome(){
+type RootStackParamList = {
+    NewAccount: undefined;
+    // Add other screen names as needed
+};
 
-    const navigation = useNavigation();
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
+
+export default function IndexHome(){
+    const navigation = useNavigation<NavigationProp>();
+    const videoRef = useRef<Video>(null);
     
-    function gotoNextPage(){ navigation.navigate("NewAccount")}
+    const handleButtonPress = () => {
+        navigation.navigate('NewAccount');
+    };
 
     return(
         <MainView>
             <Video
-            source={require('../../video/dunks.mp4')}
-            resizeMode={ResizeMode.COVER}
-            style={{width:width, height:height, opacity:0.8}}
-            isLooping={true}
-            shouldPlay={true}
+                ref={videoRef}
+                source={require('../../video/dunks2.mp4')}
+                resizeMode={ResizeMode.COVER}
+                style={{width:width, height:height, opacity:0.8}}
+                isLooping={true}
+                shouldPlay={true}
             />
             <FrontView>
                 <Logo source={require('../../images/fly.png')}/>
             
-                <Button onPress={gotoNextPage} underlayColor="#006837">
+                <Button 
+                    underlayColor="#006837"
+                    onPress={handleButtonPress}
+                >
                     <Text style={{color:'#000', fontWeight:'bold'}}>NUNCA DESISTA DE VOAR</Text>
                 </Button>
             </FrontView>
