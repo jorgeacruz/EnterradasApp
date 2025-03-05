@@ -5,9 +5,6 @@ import { FrontView, MainView, Button, Text, Logo } from "./styles";
 import { Video, ResizeMode, AVPlaybackStatus } from "expo-av";
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-// Remove unused import if not needed
-// import NewAccount from "./NewAccount";
-
 //video Dimensions
 const { width, height } = Dimensions.get('window');
 
@@ -35,6 +32,7 @@ export default function IndexHome(){
                 style={{width:width, height:height, opacity:0.8}}
                 isLooping={true}
                 shouldPlay={true}
+                isMuted={true}
             />
             <FrontView>
                 <Logo source={require('../../images/fly.png')}/>
